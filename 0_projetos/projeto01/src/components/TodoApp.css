@@ -1,0 +1,13 @@
+body {
+  font-family: Helvetica;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #452;
+}
+
+.empty {
+  text-align: center;
+}
