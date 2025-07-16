@@ -2,6 +2,8 @@ import "./App.css";
 import Componente1 from "./components/Componente1";
 import PrimeiroComponente from "./components/PrimeiroComponente";
 
+import Events from "./components/Events";
+
 function App() {
   //comentário
   return (
@@ -14,6 +16,7 @@ function App() {
       <PrimeiroComponente />
       {/* importação do componente pai criado */}
       <Componente1 />
+      <Events />
     </>
   );
 }
