@@ -2,7 +2,7 @@ import Button from "./Button";
 import "./ImcCalc.modules.css";
 import { useState } from "react";
 
-const ImcCalc = () => {
+const ImcCalc = ({ calcImc }) => {
   const [altura, setAltura] = useState("");
   const [peso, setPeso] = useState("");
 
@@ -27,6 +27,7 @@ const ImcCalc = () => {
     e.preventDefault();
     setAltura("");
     setPeso("");
+    alert("Dados limpos!");
   };
 
   return (
@@ -59,7 +60,11 @@ const ImcCalc = () => {
         </div>
 
         <div className="action-control">
-          <Button id="calc-btn" text="Calcular IMC" />
+          <Button
+            id="calc-btn"
+            text="Calcular IMC"
+            action={(e) => calcImc(e, altura, peso)}
+          />
           <Button id="clear-btn" text="Limpar" action={clearForm} />
         </div>
       </form>
